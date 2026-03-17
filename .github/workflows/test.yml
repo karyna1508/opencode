@@ -27,7 +27,7 @@ jobs:
             host: blacksmith-4vcpu-ubuntu-2404
           - name: windows
             host: blacksmith-4vcpu-windows-2025
-    runs-on: ${{ matrix.settings.host }}
+    runs-on: self-hosted
     defaults:
       run:
         shell: bash
