@@ -103,11 +103,63 @@ runs:
         PY
         #endregion
 
+<<<<<<< Updated upstream
+=======
+    - name: Compute lock hash
+      id: lock
+      shell: bash
+      run: |
+        #region agent log
+        python3 - <<'PY'
+        import hashlib
+        import json
+        import os
+        import time
+
+        path = "/Users/karyna/Documents/goLearn/ci_improvement/opencode/.cursor/debug-e429ad.log"
+        out = os.environ["GITHUB_OUTPUT"]
+        files = [
+          "bun.lock",
+          "github/bun.lock",
+          "packages/console/resource/bun.lock",
+          "sdks/vscode/bun.lock",
+        ]
+        hits = [f for f in files if os.path.exists(f)]
+        if not hits:
+          key = "nolock"
+        else:
+          h = hashlib.sha256()
+          for f in hits:
+            h.update(f.encode("utf-8"))
+            with open(f, "rb") as fh:
+              h.update(fh.read())
+          key = h.hexdigest()
+        with open(out, "a", encoding="utf-8") as fh:
+          fh.write(f"value={key}\n")
+        log = {
+          "sessionId": "e429ad",
+          "runId": "pre-fix-2",
+          "hypothesisId": "H6",
+          "location": ".github/actions/setup-bun/action.yml:Compute lock hash",
+          "message": "computed lock hash without hashFiles expression",
+          "data": {"files": hits, "key": key, "count": len(hits)},
+          "timestamp": int(time.time() * 1000),
+        }
+        with open(path, "a", encoding="utf-8") as fh:
+          fh.write(json.dumps(log) + "\n")
+        PY
+        #endregion
+
+>>>>>>> Stashed changes
     - name: Cache Bun dependencies
       uses: actions/cache@v4
       with:
         path: ${{ steps.cache.outputs.dir }}
+<<<<<<< Updated upstream
         key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock', 'github/bun.lock', 'packages/console/resource/bun.lock', 'sdks/vscode/bun.lock') }}
+=======
+        key: ${{ runner.os }}-bun-${{ steps.lock.outputs.value }}
+>>>>>>> Stashed changes
         restore-keys: |
           ${{ runner.os }}-bun-
 
