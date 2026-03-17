@@ -103,8 +103,6 @@ runs:
         PY
         #endregion
 
-<<<<<<< Updated upstream
-=======
     - name: Compute lock hash
       id: lock
       shell: bash
@@ -150,16 +148,11 @@ runs:
         PY
         #endregion
 
->>>>>>> Stashed changes
     - name: Cache Bun dependencies
       uses: actions/cache@v4
       with:
         path: ${{ steps.cache.outputs.dir }}
-<<<<<<< Updated upstream
-        key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock', 'github/bun.lock', 'packages/console/resource/bun.lock', 'sdks/vscode/bun.lock') }}
-=======
         key: ${{ runner.os }}-bun-${{ steps.lock.outputs.value }}
->>>>>>> Stashed changes
         restore-keys: |
           ${{ runner.os }}-bun-
 
