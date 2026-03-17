@@ -64,7 +64,7 @@ jobs:
           - name: windows
             host: blacksmith-4vcpu-windows-2025
             playwright: bunx playwright install
-    runs-on: ${{ matrix.settings.host }}
+    runs-on: self-hosted
     env:
       PLAYWRIGHT_BROWSERS_PATH: 0
     defaults:
