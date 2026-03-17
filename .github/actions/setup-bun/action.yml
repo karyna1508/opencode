@@ -28,93 +28,13 @@ runs:
       shell: bash
       run: echo "dir=$(bun pm cache)" >> "$GITHUB_OUTPUT"
 
-    - name: Debug Bun lock visibility
-      shell: bash
-      run: |
-        #region agent log
-        python3 - <<'PY'
-        import glob
-        import json
-        import os
-        import time
-
-        path = "/Users/karyna/Documents/goLearn/ci_improvement/opencode/.cursor/debug-e429ad.log"
-        workspace = os.environ.get("GITHUB_WORKSPACE", "")
-        pwd = os.getcwd()
-        locks = glob.glob("**/bun.lock", recursive=True)
-        rows = []
-        for f in locks[:20]:
-          rows.append({
-            "path": f,
-            "abs": os.path.abspath(f),
-            "exists": os.path.exists(f),
-            "readable": os.access(f, os.R_OK),
-          })
-        data = {
-          "workspace": workspace,
-          "pwd": pwd,
-          "lock_count": len(locks),
-          "locks_preview": rows,
-          "workspace_exists": os.path.exists(workspace) if workspace else False,
-          "workspace_readable": os.access(workspace, os.R_OK) if workspace else False,
-        }
-        log = {
-          "sessionId": "e429ad",
-          "runId": "pre-fix-1",
-          "hypothesisId": "H1",
-          "location": ".github/actions/setup-bun/action.yml:Debug Bun lock visibility",
-          "message": "workspace and bun.lock discovery before actions/cache hashFiles",
-          "data": data,
-          "timestamp": int(time.time() * 1000),
-        }
-        with open(path, "a", encoding="utf-8") as fh:
-          fh.write(json.dumps(log) + "\n")
-        PY
-        #endregion
-
-    - name: Debug environment for cache key
-      shell: bash
-      run: |
-        #region agent log
-        python3 - <<'PY'
-        import json
-        import os
-        import time
-
-        path = "/Users/karyna/Documents/goLearn/ci_improvement/opencode/.cursor/debug-e429ad.log"
-        data = {
-          "runner_os": os.environ.get("RUNNER_OS", ""),
-          "runner_arch": os.environ.get("RUNNER_ARCH", ""),
-          "github_workspace": os.environ.get("GITHUB_WORKSPACE", ""),
-          "github_action_path": os.environ.get("GITHUB_ACTION_PATH", ""),
-          "github_repository": os.environ.get("GITHUB_REPOSITORY", ""),
-        }
-        log = {
-          "sessionId": "e429ad",
-          "runId": "pre-fix-1",
-          "hypothesisId": "H2",
-          "location": ".github/actions/setup-bun/action.yml:Debug environment for cache key",
-          "message": "runner environment before cache key expression evaluation",
-          "data": data,
-          "timestamp": int(time.time() * 1000),
-        }
-        with open(path, "a", encoding="utf-8") as fh:
-          fh.write(json.dumps(log) + "\n")
-        PY
-        #endregion
-
     - name: Compute lock hash
       id: lock
       shell: bash
       run: |
-        #region agent log
         python3 - <<'PY'
         import hashlib
-        import json
         import os
-        import time
-
-        path = "/Users/karyna/Documents/goLearn/ci_improvement/opencode/.cursor/debug-e429ad.log"
         out = os.environ["GITHUB_OUTPUT"]
         files = [
           "bun.lock",
@@ -134,19 +54,7 @@ runs:
           key = h.hexdigest()
         with open(out, "a", encoding="utf-8") as fh:
           fh.write(f"value={key}\n")
-        log = {
-          "sessionId": "e429ad",
-          "runId": "pre-fix-2",
-          "hypothesisId": "H6",
-          "location": ".github/actions/setup-bun/action.yml:Compute lock hash",
-          "message": "computed lock hash without hashFiles expression",
-          "data": {"files": hits, "key": key, "count": len(hits)},
-          "timestamp": int(time.time() * 1000),
-        }
-        with open(path, "a", encoding="utf-8") as fh:
-          fh.write(json.dumps(log) + "\n")
         PY
-        #endregion
 
     - name: Cache Bun dependencies
       uses: actions/cache@v4
