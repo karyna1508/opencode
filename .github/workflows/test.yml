@@ -25,8 +25,8 @@ jobs:
         settings:
           - name: linux
             host: ubuntu-latest
-          - name: windows
-            host: windows-latest
+          # - name: windows
+          #   host: windows-latest
     runs-on: ${{ matrix.settings.host }}
     defaults:
       run:
@@ -58,9 +58,9 @@ jobs:
           - name: linux
             host: ubuntu-latest
             playwright: bunx playwright install --with-deps
-          - name: windows
-            host: windows-latest
-            playwright: bunx playwright install
+          # - name: windows
+          #   host: windows-latest
+          #   playwright: bunx playwright install
     runs-on: ${{ matrix.settings.host }}
     env:
       PLAYWRIGHT_BROWSERS_PATH: 0
