@@ -24,10 +24,10 @@ jobs:
       matrix:
         settings:
           - name: linux
-            host: blacksmith-4vcpu-ubuntu-2404
+            os: ubuntu-latest
           - name: windows
-            host: blacksmith-4vcpu-windows-2025
-    runs-on: self-hosted
+            os: windows-latest
+    runs-on: ${{ matrix.settings.os }}
     defaults:
       run:
         shell: bash
@@ -78,7 +78,7 @@ jobs:
 
       - name: Configure FastCI
         uses: jfrog-fastci/fastci@v0
-        
+
       - name: Setup Bun
         uses: ./.github/actions/setup-bun
 
