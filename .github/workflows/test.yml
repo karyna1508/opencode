@@ -25,20 +25,20 @@ jobs:
         settings:
           - name: linux
             os: ubuntu-latest
-          - name: windows
-            os: windows-latest
+          # - name: windows
+          #   os: windows-latest
     runs-on: ${{ matrix.settings.os }}
     defaults:
       run:
         shell: bash
     steps:
+      - name: Configure FastCI
+        uses: jfrog-fastci/fastci@v0
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Configure FastCI
-        uses: jfrog-fastci/fastci@v0
 
       - name: Setup Bun
         uses: ./.github/actions/setup-bun
@@ -59,25 +59,25 @@ jobs:
       matrix:
         settings:
           - name: linux
-            host: blacksmith-4vcpu-ubuntu-2404
+            os: ubuntu-latest
             playwright: bunx playwright install --with-deps
-          - name: windows
-            host: blacksmith-4vcpu-windows-2025
-            playwright: bunx playwright install
-    runs-on: self-hosted
+          # - name: windows
+          #   host: blacksmith-4vcpu-windows-2025
+          #   playwright: bunx playwright install
+    runs-on: ${{ matrix.settings.os }}
     env:
       PLAYWRIGHT_BROWSERS_PATH: 0
     defaults:
       run:
         shell: bash
     steps:
+      - name: Configure FastCI
+        uses: jfrog-fastci/fastci@v0
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Configure FastCI
-        uses: jfrog-fastci/fastci@v0
 
       - name: Setup Bun
         uses: ./.github/actions/setup-bun
