@@ -71,6 +71,9 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Configure FastCI
+        uses: jfrog-fastci/fastci@v0
+        
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
