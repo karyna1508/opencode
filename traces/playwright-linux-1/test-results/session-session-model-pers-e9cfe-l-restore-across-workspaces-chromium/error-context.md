@@ -1,0 +1,182 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - button "Toggle sidebar" [expanded] [ref=e8]:
+          - img [ref=e10]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic:
+              - generic:
+                - button [disabled]:
+                  - generic:
+                    - img
+          - generic [ref=e15]:
+            - button "Navigate back" [ref=e17]:
+              - img [ref=e19]
+            - button "Navigate forward" [disabled] [ref=e22]:
+              - img [ref=e24]
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - navigation "Projects and sessions" [ref=e29]:
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - generic [ref=e34]:
+                - button "opencode-e2e-project-01u80U" [ref=e36]:
+                  - generic [ref=e39]: o
+                - button "Open project" [ref=e41]:
+                  - img [ref=e43]
+              - generic [ref=e45]:
+                - button "Settings" [ref=e47]:
+                  - img [ref=e49]
+                - button "Help" [ref=e53]:
+                  - img [ref=e55]
+            - generic [ref=e58]:
+              - generic [ref=e60]:
+                - generic [ref=e61]:
+                  - generic [ref=e62]: opencode-e2e-project-01u80U
+                  - generic [ref=e64]: /tmp/opencode-e2e-project-01u80U
+                - button "More options" [ref=e65]:
+                  - img [ref=e67]
+              - generic [ref=e74]:
+                - button "New workspace" [ref=e76]:
+                  - img [ref=e78]
+                  - text: New workspace
+                - generic [ref=e81]:
+                  - generic [ref=e83]:
+                    - generic [ref=e86]:
+                      - 'button "local : master" [expanded] [ref=e87]':
+                        - generic [ref=e88]:
+                          - img [ref=e91]
+                          - generic [ref=e93]: "local :"
+                          - generic [ref=e94]: master
+                          - img [ref=e96]
+                      - generic:
+                        - generic:
+                          - button "More options":
+                            - generic:
+                              - img
+                        - generic:
+                          - button "New session":
+                            - generic:
+                              - img
+                    - navigation [ref=e99]:
+                      - generic [ref=e100]:
+                        - link "Root session 1773844971033" [ref=e101]:
+                          - link "Root session 1773844971033" [ref=e102]:
+                            - /url: /L3RtcC9vcGVuY29kZS1lMmUtcHJvamVjdC0wMXU4MFU/session/ses_2fe99c0a0ffeyyCl6RJ7ss4oXH
+                            - generic [ref=e103]:
+                              - img [ref=e106]
+                              - generic [ref=e108]: Root session 1773844971033
+                        - generic:
+                          - generic:
+                            - button "Archive":
+                              - generic:
+                                - img
+                  - generic [ref=e110]:
+                    - generic [ref=e113]:
+                      - 'button "sandbox : opencode/cosmic-wolf" [expanded] [ref=e114]':
+                        - generic [ref=e115]:
+                          - img [ref=e118]
+                          - generic [ref=e120]: "sandbox :"
+                          - generic [ref=e121]: opencode/cosmic-wolf
+                          - img [ref=e123]
+                      - generic:
+                        - generic:
+                          - button "More options":
+                            - generic:
+                              - img
+                        - generic:
+                          - button "New session":
+                            - generic:
+                              - img
+                    - navigation [ref=e126]:
+                      - generic [ref=e127]:
+                        - link "Workspace two 1773844990335" [ref=e128]:
+                          - link "Workspace two 1773844990335" [ref=e129]:
+                            - /url: /L3RtcC9vcGVuY29kZS1lMmUtNVpucmc5L3NoYXJlL29wZW5jb2RlL3dvcmt0cmVlLzYxZWM4Y2I2ZTk2OGQ2ZGVjMTM3MzJjMmVjNzM0N2I4ZjJmYjcwYWIvY29zbWljLXdvbGY/session/ses_2fe997515ffekgTM8zKUmcke5p
+                            - generic [ref=e130]:
+                              - img [ref=e133]
+                              - generic [ref=e135]: Workspace two 1773844990335
+                        - generic:
+                          - generic:
+                            - button "Archive":
+                              - generic:
+                                - img
+                  - generic [ref=e137]:
+                    - generic [ref=e140]:
+                      - 'button "sandbox : opencode/tidy-panda" [expanded] [ref=e141]':
+                        - generic [ref=e142]:
+                          - img [ref=e145]
+                          - generic [ref=e147]: "sandbox :"
+                          - generic [ref=e148]: opencode/tidy-panda
+                          - img [ref=e150]
+                      - generic:
+                        - generic:
+                          - button "More options":
+                            - generic:
+                              - img
+                        - generic:
+                          - button "New session":
+                            - generic:
+                              - img
+                    - navigation [ref=e153]:
+                      - generic [ref=e154]:
+                        - 'link "Workspace One: 1773844982149" [ref=e155]':
+                          - 'link "Workspace One: 1773844982149" [ref=e156]':
+                            - /url: /L3RtcC9vcGVuY29kZS1lMmUtNVpucmc5L3NoYXJlL29wZW5jb2RlL3dvcmt0cmVlLzYxZWM4Y2I2ZTk2OGQ2ZGVjMTM3MzJjMmVjNzM0N2I4ZjJmYjcwYWIvdGlkeS1wYW5kYQ/session/ses_2fe999563ffeaumqcB4oAvQ6zE
+                            - generic [ref=e157]:
+                              - img [ref=e160]
+                              - generic [ref=e162]: "Workspace One: 1773844982149"
+                        - generic:
+                          - generic:
+                            - button "Archive":
+                              - generic:
+                                - img
+              - generic [ref=e165]:
+                - generic [ref=e166]:
+                  - generic [ref=e167]: Getting started
+                  - generic [ref=e168]: OpenCode includes free models so you can start immediately.
+                  - generic [ref=e169]: Connect any provider to use models, inc. Claude, GPT, Gemini etc.
+                - generic [ref=e170]:
+                  - button "Connect provider" [ref=e171]:
+                    - img [ref=e173]
+                    - text: Connect provider
+                  - button "Not yet" [ref=e175]
+        - main [ref=e178]
+      - complementary "Development performance diagnostics" [ref=e180]:
+        - generic [ref=e181]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: NAV
+            - generic [ref=e185]: n/a
+          - generic [ref=e187]:
+            - generic [ref=e188]: FPS
+            - generic [ref=e189]: "7"
+          - generic [ref=e191]:
+            - generic [ref=e192]: FRAME
+            - generic [ref=e193]: "567"
+          - generic [ref=e195]:
+            - generic [ref=e196]: JANK
+            - generic [ref=e197]: "17"
+          - generic [ref=e199]:
+            - generic [ref=e200]: LONG
+            - generic [ref=e201]: 2472/6
+          - generic [ref=e203]:
+            - generic [ref=e204]: DELAY
+            - generic [ref=e205]: "14"
+          - generic [ref=e207]:
+            - generic [ref=e208]: INP
+            - generic [ref=e209]: "192"
+          - generic [ref=e211]:
+            - generic [ref=e212]: CLS
+            - generic [ref=e213]: "0.02"
+          - generic [ref=e215]:
+            - generic [ref=e216]: MEM
+            - generic [ref=e217]: 2%
+  - generic:
+    - region "Notifications (alt+T)":
+      - list
+```

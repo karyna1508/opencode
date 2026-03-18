@@ -1,0 +1,187 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - button "Toggle sidebar" [ref=e8]:
+          - img [ref=e10]
+        - generic [ref=e12]:
+          - button "New session" [ref=e16]:
+            - img [ref=e18]
+          - generic [ref=e20]:
+            - button "Navigate back" [ref=e22]:
+              - img [ref=e24]
+            - button "Navigate forward" [disabled] [ref=e27]:
+              - img [ref=e29]
+      - button "Search files" [ref=e33]:
+        - generic [ref=e34]:
+          - img [ref=e36]
+          - generic [ref=e38]: Search E2E Project
+        - generic [ref=e39]: Ctrl+P
+      - generic [ref=e43]:
+        - button "Copy path" [ref=e46]:
+          - img [ref=e48]
+          - generic [ref=e50]: Copy path
+        - generic [ref=e51]:
+          - button "Status" [ref=e53]:
+            - img [ref=e57]
+          - button "Toggle terminal" [ref=e61]:
+            - img [ref=e63]
+          - generic [ref=e65]:
+            - button "Toggle review" [expanded] [ref=e67]:
+              - img [ref=e69]
+            - button "Toggle file tree" [expanded] [ref=e73]:
+              - img [ref=e76]
+    - generic [ref=e79]:
+      - generic [ref=e81]:
+        - navigation "Projects and sessions" [ref=e82]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e87]:
+                - button "E2E Project" [ref=e89]:
+                  - generic [ref=e92]: E
+                - button "Open project" [ref=e94]:
+                  - img [ref=e96]
+              - generic [ref=e98]:
+                - button "Settings" [ref=e100]:
+                  - img [ref=e102]
+                - button "Help" [ref=e106]:
+                  - img [ref=e108]
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: E2E Project
+                      - generic:
+                        - generic: /home/runner/work/opencode/opencode
+                    - button:
+                      - generic:
+                        - img
+                - generic:
+                  - generic:
+                    - button:
+                      - generic:
+                        - img
+                      - text: New session
+                  - generic:
+                    - generic:
+                      - navigation:
+                        - generic:
+                          - generic:
+                            - link:
+                              - /url: /L2hvbWUvcnVubmVyL3dvcmsvb3BlbmNvZGUvb3BlbmNvZGU/session/ses_2fe9ffc96ffeRqJYf4fITdM0J7
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img
+                                - generic: E2E Session
+                          - generic:
+                            - generic:
+                              - button:
+                                - generic:
+                                  - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Getting started
+                        - generic: OpenCode includes free models so you can start immediately.
+                        - generic: Connect any provider to use models, inc. Claude, GPT, Gemini etc.
+                      - generic:
+                        - button:
+                          - generic:
+                            - img
+                          - text: Connect provider
+                        - button: Not yet
+        - main [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e118]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - textbox "Ask anything... \"Help me write a migration script\"" [ref=e122]
+                    - generic: Ask anything... "Help me write a migration script"
+                  - button "Send" [disabled] [ref=e124]:
+                    - img [ref=e126]
+                  - button "Add file" [ref=e130]:
+                    - img [ref=e132]
+                - generic [ref=e136]:
+                  - generic:
+                    - generic: Shell
+                  - generic [ref=e137]:
+                    - group [ref=e140]:
+                      - button "build" [ref=e141]:
+                        - generic [ref=e142]: build
+                        - img [ref=e145]
+                    - button "Big Pickle" [ref=e149]:
+                      - img [ref=e150]
+                      - generic [ref=e152]: Big Pickle
+                      - img [ref=e154]
+                    - group [ref=e158]:
+                      - button "Default" [ref=e159]:
+                        - generic [ref=e160]: Default
+                        - img [ref=e163]
+                    - button "Auto-accept permissions" [ref=e166]:
+                      - img [ref=e168]
+              - complementary "Review and files" [ref=e171]:
+                - generic [ref=e172]:
+                  - generic [ref=e175]:
+                    - tablist [ref=e177]:
+                      - tab "Review" [selected] [ref=e179]:
+                        - generic [ref=e181]: Review
+                      - button "Open file" [ref=e184]:
+                        - img [ref=e186]
+                    - tabpanel "Review" [ref=e188]:
+                      - region "scrollable content" [ref=e194]:
+                        - generic [ref=e197]: No changes in this session yet
+                  - generic [ref=e200]:
+                    - tablist [ref=e201]:
+                      - tab "0 Changes" [selected] [ref=e203]
+                      - tab "All files" [ref=e205]
+                    - tabpanel [ref=e206]:
+                      - generic [ref=e210]: No changes
+            - generic:
+              - generic:
+                - generic:
+                  - tablist:
+                    - generic:
+                      - generic:
+                        - button:
+                          - generic:
+                            - img
+      - complementary "Development performance diagnostics" [ref=e212]:
+        - generic [ref=e213]:
+          - generic [ref=e215]:
+            - generic [ref=e216]: NAV
+            - generic [ref=e217]: n/a
+          - generic [ref=e219]:
+            - generic [ref=e220]: FPS
+            - generic [ref=e221]: "34"
+          - generic [ref=e223]:
+            - generic [ref=e224]: FRAME
+            - generic [ref=e225]: "1100"
+          - generic [ref=e227]:
+            - generic [ref=e228]: JANK
+            - generic [ref=e229]: "13"
+          - generic [ref=e231]:
+            - generic [ref=e232]: LONG
+            - generic [ref=e233]: 1514/2
+          - generic [ref=e235]:
+            - generic [ref=e236]: DELAY
+            - generic [ref=e237]: n/a
+          - generic [ref=e239]:
+            - generic [ref=e240]: INP
+            - generic [ref=e241]: n/a
+          - generic [ref=e243]:
+            - generic [ref=e244]: CLS
+            - generic [ref=e245]: "0.00"
+          - generic [ref=e247]:
+            - generic [ref=e248]: MEM
+            - generic [ref=e249]: 2%
+  - generic:
+    - region "Notifications (alt+T)":
+      - list
+```

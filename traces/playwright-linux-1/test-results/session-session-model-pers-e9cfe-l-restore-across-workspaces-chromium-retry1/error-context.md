@@ -1,0 +1,190 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - button "Toggle sidebar" [ref=e8]:
+          - img [ref=e10]
+        - generic [ref=e12]:
+          - button "New session" [ref=e16]:
+            - img [ref=e18]
+          - generic [ref=e21]:
+            - button "Navigate back" [ref=e23]:
+              - img [ref=e25]
+            - button "Navigate forward" [disabled] [ref=e28]:
+              - img [ref=e30]
+      - button "Search files" [ref=e34]:
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - generic [ref=e39]: Search opencode-e2e-project-gEwpgR
+        - generic [ref=e40]: Ctrl+P
+      - generic [ref=e44]:
+        - button "Copy path" [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e51]: Copy path
+        - generic [ref=e52]:
+          - button "Status" [ref=e54]:
+            - img [ref=e58]
+          - button "Toggle terminal" [ref=e62]:
+            - img [ref=e64]
+          - generic [ref=e66]:
+            - button "Toggle review" [expanded] [ref=e68]:
+              - img [ref=e70]
+            - button "Toggle file tree" [expanded] [ref=e74]:
+              - img [ref=e77]
+    - generic [ref=e80]:
+      - generic [ref=e82]:
+        - navigation "Projects and sessions" [ref=e83]:
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e88]:
+                - button "opencode-e2e-project-gEwpgR" [ref=e90]:
+                  - generic [ref=e93]: o
+                - button "Open project" [ref=e95]:
+                  - img [ref=e97]
+              - generic [ref=e99]:
+                - button "Settings" [ref=e101]:
+                  - img [ref=e103]
+                - button "Help" [ref=e107]:
+                  - img [ref=e109]
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: opencode-e2e-project-gEwpgR
+                      - generic:
+                        - generic: /tmp/opencode-e2e-project-gEwpgR
+                    - button:
+                      - generic:
+                        - img
+                - generic:
+                  - generic:
+                    - button:
+                      - generic:
+                        - img
+                      - text: New session
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Getting started
+                        - generic: OpenCode includes free models so you can start immediately.
+                        - generic: Connect any provider to use models, inc. Claude, GPT, Gemini etc.
+                      - generic:
+                        - button:
+                          - generic:
+                            - img
+                          - text: Connect provider
+                        - button: Not yet
+        - main [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - img [ref=e122]
+                    - generic [ref=e125]: Build anything
+                  - generic [ref=e126]:
+                    - generic [ref=e128]: /tmp/opencode-e2e-project-gEwpgR
+                    - generic [ref=e129]:
+                      - img [ref=e131]
+                      - generic [ref=e133]: Main branch (master)
+                    - generic [ref=e135]: Last modified 7 seconds ago
+                - generic [ref=e138]:
+                  - generic [ref=e140]:
+                    - generic [ref=e141]:
+                      - textbox "Ask anything... \"Fix a TODO in the codebase\"" [ref=e142]
+                      - generic: Ask anything... "Fix a TODO in the codebase"
+                    - button "Send" [disabled] [ref=e144]:
+                      - img [ref=e146]
+                    - button "Add file" [ref=e150]:
+                      - img [ref=e152]
+                  - generic [ref=e156]:
+                    - generic:
+                      - generic: Shell
+                    - generic [ref=e157]:
+                      - group [ref=e160]:
+                        - button "build" [ref=e161]:
+                          - generic [ref=e162]: build
+                          - img [ref=e165]
+                      - button "Big Pickle" [ref=e169]:
+                        - img [ref=e170]
+                        - generic [ref=e172]: Big Pickle
+                        - img [ref=e174]
+                      - group [ref=e178]:
+                        - button "Default" [ref=e179]:
+                          - generic [ref=e180]: Default
+                          - img [ref=e183]
+                      - button "Auto-accept permissions" [ref=e186]:
+                        - img [ref=e188]
+              - complementary "Review and files" [ref=e191]:
+                - generic [ref=e192]:
+                  - generic [ref=e195]:
+                    - tablist [ref=e197]:
+                      - tab "Review" [selected] [ref=e199]:
+                        - generic [ref=e201]: Review
+                      - button "Open file" [ref=e204]:
+                        - img [ref=e206]
+                    - tabpanel "Review" [ref=e208]:
+                      - region "scrollable content" [ref=e214]:
+                        - generic [ref=e217]: No changes in this session yet
+                  - generic [ref=e220]:
+                    - tablist [ref=e221]:
+                      - tab "0 Changes" [selected] [ref=e223]
+                      - tab "All files" [ref=e225]
+                    - tabpanel [ref=e226]:
+                      - generic [ref=e230]: No changes
+            - generic:
+              - generic:
+                - generic:
+                  - tablist:
+                    - generic:
+                      - generic:
+                        - button:
+                          - generic:
+                            - img
+      - complementary "Development performance diagnostics" [ref=e232]:
+        - generic [ref=e233]:
+          - generic [ref=e235]:
+            - generic [ref=e236]: NAV
+            - generic [ref=e237]: n/a
+          - generic [ref=e239]:
+            - generic [ref=e240]: FPS
+            - generic [ref=e241]: "17"
+          - generic [ref=e243]:
+            - generic [ref=e244]: FRAME
+            - generic [ref=e245]: "2133"
+          - generic [ref=e247]:
+            - generic [ref=e248]: JANK
+            - generic [ref=e249]: "26"
+          - generic [ref=e251]:
+            - generic [ref=e252]: LONG
+            - generic [ref=e253]: 2096/2
+          - generic [ref=e255]:
+            - generic [ref=e256]: DELAY
+            - generic [ref=e257]: n/a
+          - generic [ref=e259]:
+            - generic [ref=e260]: INP
+            - generic [ref=e261]: n/a
+          - generic [ref=e263]:
+            - generic [ref=e264]: CLS
+            - generic [ref=e265]: "0.00"
+          - generic [ref=e267]:
+            - generic [ref=e268]: MEM
+            - generic [ref=e269]: 2%
+  - region "Notifications (alt+T)" [ref=e270]:
+    - list [ref=e271]:
+      - status "Question" [ref=e272]:
+        - img [ref=e275]
+        - generic [ref=e277]:
+          - generic [ref=e278]: Question
+          - generic [ref=e279]: New session in opencode has a question
+          - generic [ref=e280]:
+            - button "Go to session" [ref=e281] [cursor=pointer]
+            - button "Dismiss" [ref=e282] [cursor=pointer]
+        - button "Dismiss" [ref=e283]:
+          - img [ref=e285]
+```

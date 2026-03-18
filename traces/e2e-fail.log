@@ -1,0 +1,647 @@
+Run bun --cwd packages/app test:e2e:local
+$ bun script/e2e-local.ts
+INFO  2026-03-18T14:36:01 +1018ms service=default directory=/home/runner/work/opencode/opencode creating instance
+INFO  2026-03-18T14:36:01 +1ms service=project directory=/home/runner/work/opencode/opencode fromDirectory
+INFO  2026-03-18T14:36:02 +40ms service=db path=/tmp/opencode-e2e-5Znrg9/share/opencode/opencode-local.db opening database
+INFO  2026-03-18T14:36:02 +8ms service=db count=9 mode=dev applying migrations
+INFO  2026-03-18T14:36:02 +15ms service=default directory=/home/runner/work/opencode/opencode bootstrapping
+INFO  2026-03-18T14:36:02 +9ms service=config path=/tmp/opencode-e2e-5Znrg9/config/opencode/config.json loading
+INFO  2026-03-18T14:36:02 +4ms service=config path=/tmp/opencode-e2e-5Znrg9/config/opencode/opencode.json loading
+INFO  2026-03-18T14:36:02 +0ms service=config path=/tmp/opencode-e2e-5Znrg9/config/opencode/opencode.jsonc loading
+INFO  2026-03-18T14:36:02 +10ms service=bun cmd=["/home/runner/.bun/bin/bun","install","--no-cache"] cwd=/tmp/opencode-e2e-5Znrg9/config/opencode running
+INFO  2026-03-18T14:36:02 +7ms service=config path=/home/runner/work/opencode/opencode/.opencode/opencode.jsonc loading
+INFO  2026-03-18T14:36:02 +9ms service=config path=/home/runner/work/opencode/opencode/.opencode/opencode.json loading
+INFO  2026-03-18T14:36:02 +17ms service=plugin name=CodexAuthPlugin loading internal plugin
+INFO  2026-03-18T14:36:02 +1ms service=plugin name=CopilotAuthPlugin loading internal plugin
+INFO  2026-03-18T14:36:02 +0ms service=plugin name=gitlabAuthPlugin loading internal plugin
+INFO  2026-03-18T14:36:02 +1ms service=bus type=* subscribing
+INFO  2026-03-18T14:36:02 +11ms service=file init
+INFO  2026-03-18T14:36:02 +2ms service=bus type=file.edited subscribing
+INFO  2026-03-18T14:36:02 +0ms service=format init
+INFO  2026-03-18T14:36:02 +1ms service=vcs branch=ci_optimization initialized
+INFO  2026-03-18T14:36:02 +0ms service=bus type=file.watcher.updated subscribing
+INFO  2026-03-18T14:36:02 +2ms service=lsp serverIds=deno, typescript, vue, eslint, oxlint, biome, gopls, ruby-lsp, pyright, elixir-ls, zls, csharp, fsharp, sourcekit-lsp, rust, clangd, svelte, astro, jdtls, kotlin-ls, yaml-ls, lua-ls, php intelephense, prisma, dart, ocaml-lsp, bash, terraform, texlab, dockerfile, gleam, clojure-lsp, nixd, tinymist, haskell-language-server, julials enabled LSP servers
+INFO  2026-03-18T14:36:02 +4ms service=scheduler id=snapshot.cleanup run
+INFO  2026-03-18T14:36:02 +0ms service=scheduler id=tool.truncation.cleanup run
+INFO  2026-03-18T14:36:02 +2ms service=bus type=command.executed subscribing
+INFO  2026-03-18T14:36:02 +313ms service=bun code=0 stdout=bun install v1.3.10 (30e609e0)
+
++ @opencode-ai/plugin@1.2.27
+
+3 packages installed [361.00ms]
+ stderr=Resolving dependencies
+Resolved, downloaded and extracted [12]
+Saved lockfile
+ done
+INFO  2026-03-18T14:36:02 +1ms service=bun cmd=["/home/runner/.bun/bin/bun","install","--no-cache"] cwd=/home/runner/work/opencode/opencode/.opencode running
+INFO  2026-03-18T14:36:02 +316ms service=bun code=0 stdout=bun install v1.3.10 (30e609e0)
+
++ @opencode-ai/plugin@1.2.27
+
+3 packages installed [307.00ms]
+ stderr=Resolving dependencies
+Resolved, downloaded and extracted [6]
+Saved lockfile
+ done
+INFO  2026-03-18T14:36:02 +37ms service=session id=ses_2fe9ffc96ffeRqJYf4fITdM0J7 slug=curious-meadow version=local projectID=d1e30dcb88bfba5cb4ae5771ce3b36dbd37411b9 directory=/home/runner/work/opencode/opencode title=E2E Session time={"created":1773844562793,"updated":1773844562793} created
+INFO  2026-03-18T14:36:02 +1ms service=bus type=session.created publishing
+INFO  2026-03-18T14:36:02 +0ms service=bus type=session.updated publishing
+INFO  2026-03-18T14:36:02 +3ms service=bus type=message.updated publishing
+INFO  2026-03-18T14:36:02 +2ms service=bus type=message.part.updated publishing
+opencode server listening on http://127.0.0.1:42143
+$ playwright test
+[WebServer] $ vite --host "0.0.0.0" --port "44005"
+
+
+Running 117 tests using 5 workers
+
+[1/117] [chromium] › e2e/app/session.spec.ts:5:1 › can open an existing session and type into the prompt
+[2/117] [chromium] › e2e/app/navigation.spec.ts:5:1 › project route redirects to /session
+[3/117] [chromium] › e2e/app/server-default.spec.ts:7:1 › can set a default server on web
+[4/117] [chromium] › e2e/app/palette.spec.ts:4:1 › search palette opens and closes
+[5/117] [chromium] › e2e/app/home.spec.ts:4:1 › home renders and shows core entrypoints
+[6/117] [chromium] › e2e/app/home.spec.ts:11:1 › server picker dialog opens from home
+ERROR 2026-03-18T14:36:31 +28898ms service=server error=NotFoundError failed
+[7/117] [chromium] › e2e/app/titlebar-history.spec.ts:6:1 › titlebar back/forward navigates between sessions
+[8/117] [chromium] › e2e/app/palette.spec.ts:4:1 › search palette opens and closes (retry #1)
+[9/117] [chromium] › e2e/commands/input-focus.spec.ts:4:1 › ctrl+l focuses the prompt
+[10/117] [chromium] › e2e/app/session.spec.ts:5:1 › can open an existing session and type into the prompt (retry #1)
+[11/117] [chromium] › e2e/app/server-default.spec.ts:7:1 › can set a default server on web (retry #1)
+ERROR 2026-03-18T14:36:48 +17029ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:36:49 +220ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:36:50 +1314ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:36:50 +46ms service=server error=NotFoundError failed
+[12/117] [chromium] › e2e/app/titlebar-history.spec.ts:44:1 › titlebar forward is cleared after branching history from sidebar
+[13/117] [chromium] › e2e/commands/panels.spec.ts:10:1 › review panel can be toggled via keybind
+  1) [chromium] › e2e/app/palette.spec.ts:4:1 › search palette opens and closes ────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:51
+
+      49 |     const gotoSession = async (sessionID?: string) => {
+      50 |       await page.goto(sessionPath(directory, sessionID))
+    > 51 |       await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                  ^
+      52 |     }
+      53 |     await use(gotoSession)
+      54 |   },
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:51:50)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/palette.spec.ts:5:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/app-palette-search-palette-opens-and-closes-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/app-palette-search-palette-opens-and-closes-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/app-palette-search-palette-opens-and-closes-chromium/error-context.md
+
+
+[14/117] [chromium] › e2e/commands/tab-close.spec.ts:5:1 › mod+w closes the active file tab
+[15/117] [chromium] › e2e/app/session.spec.ts:5:1 › can open an existing session and type into the prompt (retry #2)
+[16/117] [chromium] › e2e/app/server-default.spec.ts:7:1 › can set a default server on web (retry #2)
+[17/117] [chromium] › e2e/files/file-open.spec.ts:4:1 › can open a file tab from the search palette
+[18/117] [chromium] › e2e/app/titlebar-history.spec.ts:89:1 › keyboard shortcuts navigate titlebar history
+[19/117] [chromium] › e2e/files/file-tree.spec.ts:3:1 › file tree can expand folders and open a file
+  2) [chromium] › e2e/app/session.spec.ts:5:1 › can open an existing session and type into the prompt 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:51
+
+      49 |     const gotoSession = async (sessionID?: string) => {
+      50 |       await page.goto(sessionPath(directory, sessionID))
+    > 51 |       await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                  ^
+      52 |     }
+      53 |     await use(gotoSession)
+      54 |   },
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:51:50)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/session.spec.ts:9:5
+        at withSession (/home/runner/work/opencode/opencode/packages/app/e2e/actions.ts:531:12)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/session.spec.ts:8:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:51
+
+      49 |     const gotoSession = async (sessionID?: string) => {
+      50 |       await page.goto(sessionPath(directory, sessionID))
+    > 51 |       await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                  ^
+      52 |     }
+      53 |     await use(gotoSession)
+      54 |   },
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:51:50)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/session.spec.ts:9:5
+        at withSession (/home/runner/work/opencode/opencode/packages/app/e2e/actions.ts:531:12)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/session.spec.ts:8:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/test-results/app-session-can-open-an-ex-898f8-on-and-type-into-the-prompt-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[20/117] [chromium] › e2e/files/file-viewer.spec.ts:5:1 › smoke file viewer renders real file content
+  3) [chromium] › e2e/app/server-default.spec.ts:7:1 › can set a default server on web ─────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:51
+
+      49 |     const gotoSession = async (sessionID?: string) => {
+      50 |       await page.goto(sessionPath(directory, sessionID))
+    > 51 |       await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                  ^
+      52 |     }
+      53 |     await use(gotoSession)
+      54 |   },
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:51:50)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/server-default.spec.ts:16:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:51
+
+      49 |     const gotoSession = async (sessionID?: string) => {
+      50 |       await page.goto(sessionPath(directory, sessionID))
+    > 51 |       await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                  ^
+      52 |     }
+      53 |     await use(gotoSession)
+      54 |   },
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:51:50)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/app/server-default.spec.ts:16:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/test-results/app-server-default-can-set-a-default-server-on-web-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[21/117] [chromium] › e2e/models/model-picker.spec.ts:5:1 › smoke model selection updates prompt footer
+[22/117] [chromium] › e2e/models/models-visibility.spec.ts:5:1 › hiding a model removes it from the model picker
+[23/117] [chromium] › e2e/projects/project-edit.spec.ts:4:1 › dialog edit project updates name and startup script
+[24/117] [chromium] › e2e/projects/projects-close.spec.ts:6:1 › closing active project navigates to another open project
+[25/117] [chromium] › e2e/files/file-viewer.spec.ts:52:1 › cmd+f opens text viewer search while prompt is focused
+[26/117] [chromium] › e2e/projects/projects-switch.spec.ts:39:1 › can switch between projects from sidebar
+[27/117] [chromium] › e2e/projects/workspace-new-session.spec.ts:81:1 › new sessions from sidebar workspace actions stay in selected workspace
+[28/117] [chromium] › e2e/projects/workspaces.spec.ts:53:1 › can enable and disable workspaces from project menu
+[29/117] [chromium] › e2e/prompt/context.spec.ts:35:1 › context panel can be opened from the prompt
+[30/117] [chromium] › e2e/files/file-viewer.spec.ts:105:1 › cmd+f opens text viewer search while prompt is not focused
+e2e-local ignored server error: unhandledRejection
+warn: No such file or directory: '/tmp/opencode-e2e-project-Xf9W1k'
+ errno: -2,
+  path: "/tmp/opencode-e2e-project-Xf9W1k",
+  code: "ENOENT"
+
+      at files (/home/runner/work/opencode/opencode/packages/opencode/src/file/ripgrep.ts:238:31)
+
+[31/117] [chromium] › e2e/projects/projects-switch.spec.ts:70:1 › switching back to a project opens the latest workspace session
+[32/117] [chromium] › e2e/projects/workspaces.spec.ts:72:1 › can create a workspace
+[33/117] [chromium] › e2e/prompt/context.spec.ts:52:1 › context panel can be closed from the context tab close action
+[34/117] [chromium] › e2e/prompt/prompt-async.spec.ts:10:1 › prompt succeeds when sync message endpoint is unreachable
+[35/117] [chromium] › e2e/projects/workspaces.spec.ts:108:1 › non-git projects keep workspace mode disabled
+ERROR 2026-03-18T14:38:30 +100047ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+693 |           session_id: sessionID,
+694 |           time_created,
+695 |           data,
+696 |         })
+697 |         .onConflictDoUpdate({ target: MessageTable.id, set: { data } })
+698 |         .run()
+               ^
+SQLiteError: FOREIGN KEY constraint failed
+      errno: 787,
+ byteOffset: -1,
+       code: "SQLITE_CONSTRAINT_FOREIGNKEY"
+
+      at #run (bun:sqlite:185:20)
+      at <anonymous> (/home/runner/work/opencode/opencode/packages/opencode/src/session/index.ts:698:10)
+      at run (node:async_hooks:62:22)
+      at use (/home/runner/work/opencode/opencode/packages/opencode/src/storage/db.ts:140:28)
+      at <anonymous> (/home/runner/work/opencode/opencode/packages/opencode/src/session/index.ts:689:14)
+      at process (/home/runner/work/opencode/opencode/packages/opencode/src/session/processor.ts:420:25)
+ERROR 2026-03-18T14:38:30 +358ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:30 +25ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:30 +36ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:30 +127ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:30 +16ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:31 +39ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:31 +121ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:31 +474ms service=server error=NotFoundError failed
+[36/117] [chromium] › e2e/prompt/prompt-drop-file-uri.spec.ts:4:1 › dropping text/plain file: uri inserts a file pill
+ERROR 2026-03-18T14:38:32 +959ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:38:40 +7659ms service=server error=NotFoundError failed
+[37/117] [chromium] › e2e/prompt/context.spec.ts:72:1 › context panel can open file picker from context actions
+[38/117] [chromium] › e2e/prompt/prompt-drop-file.spec.ts:4:1 › dropping an image file adds an attachment
+[39/117] [chromium] › e2e/projects/workspaces.spec.ts:151:1 › can rename a workspace
+[40/117] [chromium] › e2e/prompt/prompt-history.spec.ts:82:1 › prompt history restores unsent draft with arrow navigation
+[41/117] [chromium] › e2e/prompt/prompt-mention.spec.ts:4:1 › smoke @mention inserts file pill token
+ERROR 2026-03-18T14:39:01 +21492ms service=server error=NotFoundError failed
+[42/117] [chromium] › e2e/prompt/prompt-async.spec.ts:47:1 › failed prompt send restores the composer input
+[43/117] [chromium] › e2e/prompt/prompt-multiline.spec.ts:4:1 › shift+enter inserts a newline without submitting
+[44/117] [chromium] › e2e/projects/workspaces.spec.ts:173:1 › can reset a workspace
+[45/117] [chromium] › e2e/prompt/prompt-shell.spec.ts:14:1 › shell mode runs a command in the project directory
+[46/117] [chromium] › e2e/prompt/prompt-slash-open.spec.ts:4:1 › smoke /open opens file picker dialog
+[47/117] [chromium] › e2e/prompt/prompt-history.spec.ts:126:1 › shell history stays separate from normal prompt history
+[48/117] [chromium] › e2e/prompt/prompt-slash-share.spec.ts:25:1 › /share and /unshare update session share state
+[49/117] [chromium] › e2e/prompt/prompt-slash-terminal.spec.ts:5:1 › /terminal toggles the terminal panel
+[50/117] [chromium] › e2e/prompt/prompt.spec.ts:5:1 › can send a prompt and receive a reply
+ERROR 2026-03-18T14:39:33 +31283ms service=server error=WorktreeResetFailedError failed
+[51/117] [chromium] › e2e/projects/workspaces.spec.ts:235:1 › can delete a workspace
+ERROR 2026-03-18T14:39:40 +7216ms service=server error=NotFoundError failed
+[52/117] [chromium] › e2e/session/session-child-navigation.spec.ts:4:1 › task tool child-session link does not trigger stale show errors
+[53/117] [chromium] › e2e/session/session-composer-dock.spec.ts:251:1 › default dock shows prompt input
+ERROR 2026-03-18T14:39:50 +10324ms service=server error=NotFoundError failed
+[54/117] [chromium] › e2e/session/session-model-persistence.spec.ts:266:1 › session model and variant restore per session without leaking into new sessions
+[55/117] [chromium] › e2e/session/session-review.spec.ts:126:1 › review keeps scroll position after a live diff update
+[56/117] [chromium] › e2e/session/session-undo-redo.spec.ts:52:1 › slash undo sets revert and restores prior prompt
+[57/117] [chromium] › e2e/session/session-composer-dock.spec.ts:265:1 › auto-accept toggle works before first submit
+[58/117] [chromium] › e2e/session/session.spec.ts:34:1 › session can be renamed via header menu
+ERROR 2026-03-18T14:40:08 +18299ms service=server error=NotFoundError failed
+[59/117] [chromium] › e2e/projects/workspaces.spec.ts:282:1 › can reorder workspaces by drag and drop
+[60/117] [chromium] › e2e/session/session-composer-dock.spec.ts:276:1 › blocked question flow unblocks after submit
+ERROR 2026-03-18T14:40:17 +8151ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+ERROR 2026-03-18T14:40:17 +965ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:40:18 +85ms service=session NotFoundError: NotFoundError
+[61/117] [chromium] › e2e/session/session-undo-redo.spec.ts:84:1 › slash redo clears revert and restores latest state
+[62/117] [chromium] › e2e/session/session.spec.ts:68:1 › session can be archived via header menu
+ERROR 2026-03-18T14:40:37 +19416ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+ERROR 2026-03-18T14:40:39 +1660ms service=server error=NotFoundError failed
+[63/117] [chromium] › e2e/session/session-composer-dock.spec.ts:306:1 › blocked permission flow supports allow once
+[64/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:6:1 › changing sidebar toggle keybind works
+[65/117] [chromium] › e2e/session/session.spec.ts:93:1 › session can be deleted via header menu
+ERROR 2026-03-18T14:40:44 +5750ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:40:45 +313ms service=session NotFoundError: NotFoundError
+[66/117] [chromium] › e2e/session/session-undo-redo.spec.ts:131:1 › slash undo/redo traverses multi-step revert stack
+ERROR 2026-03-18T14:40:56 +11312ms service=server error=NotFoundError failed
+[67/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:51:1 › sidebar toggle keybind guards against shortcut conflicts
+[68/117] [chromium] › e2e/session/session-model-persistence.spec.ts:266:1 › session model and variant restore per session without leaking into new sessions (retry #1)
+ERROR 2026-03-18T14:40:58 +1724ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:40:58 +34ms service=session NotFoundError: NotFoundError
+[69/117] [chromium] › e2e/session/session.spec.ts:122:1 › session can be shared and unshared via header button
+[70/117] [chromium] › e2e/settings/settings-models.spec.ts:5:1 › hiding a model removes it from the model picker
+[71/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:85:1 › resetting all keybinds to defaults works
+[72/117] [chromium] › e2e/session/session-composer-dock.spec.ts:333:1 › blocked permission flow supports reject
+ERROR 2026-03-18T14:41:14 +16194ms service=server error=NotFoundError failed
+ERROR 2026-03-18T14:41:14 +14ms service=session NotFoundError: NotFoundError
+[73/117] [chromium] › e2e/settings/settings-providers.spec.ts:4:1 › custom provider form can be filled and validates input
+[74/117] [chromium] › e2e/settings/settings-models.spec.ts:63:1 › showing a hidden model restores it to the model picker
+[75/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:119:1 › clearing a keybind works
+[76/117] [chromium] › e2e/session/session-model-persistence.spec.ts:266:1 › session model and variant restore per session without leaking into new sessions (retry #2)
+[77/117] [chromium] › e2e/settings/settings-providers.spec.ts:40:1 › custom provider form shows validation errors
+[78/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:155:1 › changing settings open keybind works
+[79/117] [chromium] › e2e/settings/settings.spec.ts:18:1 › smoke settings dialog opens, switches tabs, closes
+[80/117] [chromium] › e2e/settings/settings-providers.spec.ts:66:1 › custom provider form can add and remove models
+[81/117] [chromium] › e2e/session/session-composer-dock.spec.ts:359:1 › blocked permission flow supports allow always
+ERROR 2026-03-18T14:41:49 +34836ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[82/117] [chromium] › e2e/settings/settings.spec.ts:30:1 › changing language updates settings labels
+[83/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:195:1 › changing new session keybind works
+[84/117] [chromium] › e2e/settings/settings-providers.spec.ts:102:1 › custom provider form can add and remove headers
+[85/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:234:1 › changing file open keybind works
+ERROR 2026-03-18T14:42:09 +20145ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[86/117] [chromium] › e2e/settings/settings.spec.ts:55:1 › changing color scheme persists in localStorage
+[87/117] [chromium] › e2e/sidebar/sidebar-popover-actions.spec.ts:5:1 › collapsed sidebar popover stays open when archiving a session
+[88/117] [chromium] › e2e/session/session-composer-dock.spec.ts:386:1 › child session question request blocks parent dock and unblocks after submit
+[89/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:275:1 › changing terminal toggle keybind works
+[90/117] [chromium] › e2e/settings/settings.spec.ts:79:1 › changing theme persists in localStorage
+  4) [chromium] › e2e/session/session-model-persistence.spec.ts:266:1 › session model and variant restore per session without leaking into new sessions 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+      189 | async function goto(page: Page, directory: string, sessionID?: string) {
+      190 |   await page.goto(sessionPath(directory, sessionID))
+    > 191 |   await expect(page.locator(promptSelector)).toBeVisible()
+          |                                              ^
+      192 |   await expect.poll(async () => dirKey(await probe(page)), { timeout: 30_000 }).toBe(directory)
+      193 | }
+      194 |
+        at goto (/home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:191:46)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:297:5
+        at /home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:80:16
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:272:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:65
+
+      63 |       const gotoSession = async (sessionID?: string) => {
+      64 |         await page.goto(sessionPath(root, sessionID))
+    > 65 |         await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                    ^
+      66 |         const current = sessionIDFromUrl(page.url())
+      67 |         if (current) trackSession(current)
+      68 |       }
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:65:52)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:79:9
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:272:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry2/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/session-session-model-pers-fa18c-t-leaking-into-new-sessions-chromium-retry2/error-context.md
+
+
+[91/117] [chromium] › e2e/sidebar/sidebar-session-links.spec.ts:5:1 › sidebar session links navigate to the selected session
+[92/117] [chromium] › e2e/session/session-model-persistence.spec.ts:305:1 › session model restore across workspaces
+[93/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:311:1 › terminal toggle keybind persists after reload
+[94/117] [chromium] › e2e/settings/settings.spec.ts:119:1 › legacy oc-1 theme migrates to oc-2
+[95/117] [chromium] › e2e/sidebar/sidebar.spec.ts:4:1 › sidebar can be collapsed and expanded
+[96/117] [chromium] › e2e/session/session-composer-dock.spec.ts:432:1 › child session permission request blocks parent dock and supports allow once
+ERROR 2026-03-18T14:42:46 +37064ms service=server error=NotFoundError failed
+[97/117] [chromium] › e2e/settings/settings.spec.ts:155:1 › changing font persists in localStorage and updates CSS variable
+ERROR 2026-03-18T14:42:53 +6911ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[98/117] [chromium] › e2e/sidebar/sidebar.spec.ts:18:1 › sidebar collapsed state persists across navigation and reload
+[99/117] [chromium] › e2e/settings/settings-keybinds.spec.ts:349:1 › changing command palette keybind works
+ERROR 2026-03-18T14:43:03 +9981ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[100/117] [chromium] › e2e/settings/settings.spec.ts:187:1 › color scheme and font rehydrate after reload
+ERROR 2026-03-18T14:43:12 +9268ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[101/117] [chromium] › e2e/status/status-popover.spec.ts:4:1 › status popover opens and shows tabs
+[102/117] [chromium] › e2e/session/session-composer-dock.spec.ts:477:1 › todo dock transitions and collapse behavior
+[103/117] [chromium] › e2e/settings/settings.spec.ts:286:1 › toggling notification agent switch updates localStorage
+[104/117] [chromium] › e2e/status/status-popover.spec.ts:18:1 › status popover servers tab shows current server
+[105/117] [chromium] › e2e/terminal/terminal-init.spec.ts:6:1 › smoke terminal mounts and can create a second tab
+[106/117] [chromium] › e2e/session/session-model-persistence.spec.ts:305:1 › session model restore across workspaces (retry #1)
+[107/117] [chromium] › e2e/session/session-composer-dock.spec.ts:507:1 › keyboard focus stays off prompt while blocked
+[108/117] [chromium] › e2e/settings/settings.spec.ts:311:1 › toggling notification permissions switch updates localStorage
+[109/117] [chromium] › e2e/status/status-popover.spec.ts:30:1 › status popover can switch to mcp tab
+[110/117] [chromium] › e2e/terminal/terminal-reconnect.spec.ts:15:1 › terminal reconnects without replacing the pty
+[111/117] [chromium] › e2e/settings/settings.spec.ts:336:1 › toggling notification errors switch updates localStorage
+[112/117] [chromium] › e2e/status/status-popover.spec.ts:45:1 › status popover can switch to lsp tab
+ERROR 2026-03-18T14:43:58 +46054ms service=server error=NotFoundError failed
+[113/117] [chromium] › e2e/terminal/terminal-tabs.spec.ts:39:1 › inactive terminal tab buffers persist across tab switches
+[114/117] [chromium] › e2e/session/session-model-persistence.spec.ts:305:1 › session model restore across workspaces (retry #2)
+[115/117] [chromium] › e2e/settings/settings.spec.ts:361:1 › changing sound agent selection persists in localStorage
+[116/117] [chromium] › e2e/status/status-popover.spec.ts:60:1 › status popover can switch to plugins tab
+[117/117] [chromium] › e2e/terminal/terminal.spec.ts:6:1 › terminal panel can be toggled
+[118/117] (retries) [chromium] › e2e/status/status-popover.spec.ts:75:1 › status popover closes on escape
+[119/117] (retries) [chromium] › e2e/terminal/terminal-tabs.spec.ts:95:1 › closing the active terminal tab falls back to the previous tab
+[120/117] (retries) [chromium] › e2e/settings/settings.spec.ts:381:1 › selecting none disables agent sound
+ERROR 2026-03-18T14:44:26 +28158ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[121/117] (retries) [chromium] › e2e/thinking-level.spec.ts:4:1 › smoke model variant cycle updates label
+ERROR 2026-03-18T14:44:36 +9504ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[122/117] (retries) [chromium] › e2e/status/status-popover.spec.ts:85:1 › status popover closes when clicking outside
+[123/117] (retries) [chromium] › e2e/settings/settings.spec.ts:403:1 › changing permissions and errors sounds updates localStorage
+ERROR 2026-03-18T14:44:44 +7701ms service=session.processor error=The operation was aborted. stack="abort@[native code]\ncancel@/home/runner/work/opencode/opencode/packages/opencode/src/session/prompt.ts:208:22\n@/home/runner/work/opencode/opencode/packages/opencode/src/server/routes/session.ts:263:23\ndispatch@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/compose.js:17:30\n@/home/runner/work/opencode/opencode/node_modules/.bun/hono@4.10.7/node_modules/hono/dist/validator/validator.js:70:22\nprocessTicksAndRejections@" process
+[124/117] (retries) [chromium] › e2e/settings/settings.spec.ts:464:1 › toggling updates startup switch updates localStorage
+[125/117] (retries) [chromium] › e2e/settings/settings.spec.ts:496:1 › toggling release notes switch updates localStorage
+  5) [chromium] › e2e/session/session-model-persistence.spec.ts:305:1 › session model restore across workspaces 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+      189 | async function goto(page: Page, directory: string, sessionID?: string) {
+      190 |   await page.goto(sessionPath(directory, sessionID))
+    > 191 |   await expect(page.locator(promptSelector)).toBeVisible()
+          |                                              ^
+      192 |   await expect.poll(async () => dirKey(await probe(page)), { timeout: 30_000 }).toBe(directory)
+      193 | }
+      194 |
+        at goto (/home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:191:46)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:342:5
+        at /home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:80:16
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:308:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-component="prompt-input"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('[data-component="prompt-input"]')
+
+
+       at fixtures.ts:65
+
+      63 |       const gotoSession = async (sessionID?: string) => {
+      64 |         await page.goto(sessionPath(root, sessionID))
+    > 65 |         await expect(page.locator(promptSelector)).toBeVisible()
+         |                                                    ^
+      66 |         const current = sessionIDFromUrl(page.url())
+      67 |         if (current) trackSession(current)
+      68 |       }
+        at gotoSession (/home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:65:52)
+        at /home/runner/work/opencode/opencode/packages/app/e2e/fixtures.ts:79:9
+        at /home/runner/work/opencode/opencode/packages/app/e2e/session/session-model-persistence.spec.ts:308:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace e2e/test-results/session-session-model-pers-e9cfe-l-restore-across-workspaces-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[126/117] (retries) [chromium] › e2e/session/session-model-persistence.spec.ts:353:1 › variant preserved when switching agent modes
+  1 failed
+    [chromium] › e2e/session/session-model-persistence.spec.ts:266:1 › session model and variant restore per session without leaking into new sessions 
+  4 flaky
+    [chromium] › e2e/app/palette.spec.ts:4:1 › search palette opens and closes ─────────────────────
+    [chromium] › e2e/app/server-default.spec.ts:7:1 › can set a default server on web ──────────────
+    [chromium] › e2e/app/session.spec.ts:5:1 › can open an existing session and type into the prompt 
+    [chromium] › e2e/session/session-model-persistence.spec.ts:305:1 › session model restore across workspaces 
+  5 skipped
+  107 passed (9.1m)
+error: script "test:e2e" exited with code 1
+error: script "test:e2e:local" exited with code 1
+Error: Process completed with exit code 1.

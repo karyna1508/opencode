@@ -1,0 +1,127 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - button "Toggle sidebar" [ref=e8]:
+          - img [ref=e10]
+        - generic [ref=e12]:
+          - button "New session" [ref=e16]:
+            - img [ref=e18]
+          - generic [ref=e20]:
+            - button "Navigate back" [ref=e22]:
+              - img [ref=e24]
+            - button "Navigate forward" [disabled] [ref=e27]:
+              - img [ref=e29]
+    - generic [ref=e31]:
+      - generic [ref=e33]:
+        - navigation "Projects and sessions" [ref=e34]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e39]:
+                - button "opencode-e2e-project-rNRLUZ" [ref=e41]:
+                  - generic [ref=e44]: o
+                - button "Open project" [ref=e46]:
+                  - img [ref=e48]
+              - generic [ref=e50]:
+                - button "Settings" [ref=e52]:
+                  - img [ref=e54]
+                - button "Help" [ref=e58]:
+                  - img [ref=e60]
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: opencode-e2e-project-rNRLUZ
+                      - generic:
+                        - generic: /tmp/opencode-e2e-project-rNRLUZ
+                    - button:
+                      - generic:
+                        - img
+                - generic:
+                  - generic:
+                    - button:
+                      - generic:
+                        - img
+                      - text: New session
+                  - generic:
+                    - generic:
+                      - navigation:
+                        - generic:
+                          - generic:
+                            - link:
+                              - /url: /L3RtcC9vcGVuY29kZS1lMmUtcHJvamVjdC1yTlJMVVo/session/ses_2fe9bcfe1ffeBaLug2kRmhKO48
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img
+                                - generic: Session model 1773844836067
+                          - generic:
+                            - generic:
+                              - button:
+                                - generic:
+                                  - img
+                        - generic:
+                          - generic:
+                            - link:
+                              - /url: /L3RtcC9vcGVuY29kZS1lMmUtcHJvamVjdC1yTlJMVVo/session/ses_2fe9c1fddffe1FMv9NmSdlQEwE
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - img
+                                - generic: Session variant 1773844815588
+                          - generic:
+                            - generic:
+                              - button:
+                                - generic:
+                                  - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Getting started
+                        - generic: OpenCode includes free models so you can start immediately.
+                        - generic: Connect any provider to use models, inc. Claude, GPT, Gemini etc.
+                      - generic:
+                        - button:
+                          - generic:
+                            - img
+                          - text: Connect provider
+                        - button: Not yet
+        - main [ref=e63]
+      - complementary "Development performance diagnostics" [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: NAV
+            - generic [ref=e70]: n/a
+          - generic [ref=e72]:
+            - generic [ref=e73]: FPS
+            - generic [ref=e74]: "4"
+          - generic [ref=e76]:
+            - generic [ref=e77]: FRAME
+            - generic [ref=e78]: "600"
+          - generic [ref=e80]:
+            - generic [ref=e81]: JANK
+            - generic [ref=e82]: "8"
+          - generic [ref=e84]:
+            - generic [ref=e85]: LONG
+            - generic [ref=e86]: 2215/4
+          - generic [ref=e88]:
+            - generic [ref=e89]: DELAY
+            - generic [ref=e90]: "8"
+          - generic [ref=e92]:
+            - generic [ref=e93]: INP
+            - generic [ref=e94]: "200"
+          - generic [ref=e96]:
+            - generic [ref=e97]: CLS
+            - generic [ref=e98]: "0.00"
+          - generic [ref=e100]:
+            - generic [ref=e101]: MEM
+            - generic [ref=e102]: 2%
+  - generic:
+    - region "Notifications (alt+T)":
+      - list
+```
