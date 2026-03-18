@@ -57,9 +57,10 @@
 
 ### Cursor Skill: `trace-ci-optimizer`
 - **Location:** `.cursor/skills/trace-ci-optimizer`
-- **Purpose:** Standardize FastCI trace analysis and CI optimization into a repeatable workflow.
-- **What it adds:** A clear checklist for scope selection, trace discovery/validation, bottleneck extraction, and ranked workflow-only optimization proposals with expected impact and risk.
-- **How it is used in this task:** Use the skill as an analysis guide to keep findings evidence-based and to separate test failures from workflow performance issues.
+- **Purpose:** Standardize FastCI trace analysis and CI optimization into an iterative, evidence-based workflow lifecycle.
+- **What it adds:** A mandatory checklist covering scope selection, related-trace discovery, JSONL validation, bottleneck analysis, workflow-only change proposals, and structured reporting.
+- **Validation loop:** Requires pushing workflow changes, rerunning affected workflows, collecting fresh traces, and comparing baseline vs new traces for both performance gains and regression signals.
+- **Completion criteria:** Treats the work as complete only after trace-backed validation confirms pipeline health; otherwise it loops with additional workflow fixes.
 
 ### Trace Sources
 - **Trace links / IDs:** <!-- links or ids -->

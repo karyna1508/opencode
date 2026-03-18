@@ -59,7 +59,7 @@ jobs:
         settings:
           - name: linux
             host: ubuntu-latest
-            playwright: bunx playwright install --with-deps
+            playwright: bunx playwright install --with-deps chromium
           # - name: windows
           #   host: windows-latest
           #   playwright: bunx playwright install
@@ -86,7 +86,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('packages/app/package.json', 'bun.lock') }}
+          key: ${{ runner.os }}-playwright-${{ hashFiles('packages/app/package.json') }}
           restore-keys: |
             ${{ runner.os }}-playwright-
 
