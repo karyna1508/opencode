@@ -1,0 +1,189 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0f1116;
+  color: #e8eaf0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: #171a22;
+  border: 1px solid #262b36;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+h1,
+h2 {
+  margin: 0 0 10px;
+}
+
+.upload {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.pill {
+  border: 1px solid #333b4a;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.muted {
+  margin: 0;
+  color: #9da7bc;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: #c6cede;
+}
+
+.check {
+  align-items: center;
+}
+
+.check > span {
+  line-height: 1;
+}
+
+.check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+select,
+button,
+input[type="file"] {
+  background: #0f1218;
+  color: #e8eaf0;
+  border: 1px solid #2f3645;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.timeline {
+  display: grid;
+  gap: 8px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.timeline-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.timeline-track {
+  position: relative;
+  height: 16px;
+  border-radius: 8px;
+  background: #10151f;
+  border: 1px solid #222837;
+}
+
+.timeline-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 8px;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #252c3a;
+  padding: 8px;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+th {
+  color: #aeb8cc;
+  font-weight: 600;
+}
+
+.name-cell {
+  min-width: 320px;
+}
+
+.right {
+  text-align: right;
+}
+
+pre {
+  margin: 0;
+  overflow: auto;
+  max-height: 280px;
+  background: #10141e;
+  border: 1px solid #252c3a;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .timeline-row {
+    grid-template-columns: 1fr;
+  }
+}
